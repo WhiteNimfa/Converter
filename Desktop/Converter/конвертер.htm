@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Converter</title>
+<script>
+function f1(){
+  var number = document.getElementById("number").value; // добавить проверку, что это строка
+  var arrayNumber= number.split('');  // массив	
+  console.log(arrayNumber);
+  console.log(arrayNumber[0]);
+  for (i = 0, j = (arrayNumber.length)-1 ; i <= (arrayNumber.length)-1 && j < arrayNumber.length; i++, j--){
+  	  var sum
+  	  var sum = parseInt(arrayNumber[i]) * Math.pow(2,j); 
+  	  sum += sum;
+  };
+  
+  alert (sum);
+
+};
+</script>
+</head>
+<body>
+	<form name="main">
+	Число, которое будем переводить: <input size = 10 id = "number" name="number">
+	в: <input size = 5 name="firstSystem"> - ичной системе;
+	<br />
+	<br />
+	Нужно перевести в: <input size = 5 name="secondSystem"> -чную систему.
+	<br />
+	<br />
+	Результат: <input size = 10 name="result">
+	<br />
+	<input type='button' value="Go!" onclick= "f1()">
+	</form>	
+</body>
+</html>
+
+
